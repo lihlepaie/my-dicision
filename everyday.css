@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+    font-size: 50px;
+    background-color: #255541;
+}
+
+body {
+    background-image: url(scale.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px:
+}
+
+table {
+    width: 50%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+ table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+
+ table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+ table#t01 th {
+    background-color: black;
+    color: white;
+}
