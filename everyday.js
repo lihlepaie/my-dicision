@@ -1,9 +1,74 @@
-var myInput = document.getElementById('myInput').value;
-var table = document.querySelector('#t01');
-//var myFunction = document.querySelector('.Function')
+ var tableTemplate = document.querySelector('.tableTemplate').innerHTML
+ var tableTemplateInst = Handlebars.compile(tableTemplate);
+ var tableDisplay = document.querySelector('.tableDisplay');
+ var myInput = document.getElementById('myInput').value;
+ var table = document.querySelector('#t01');
 
 
-// myInput.addEventListener('change',myFunction)
+
+
+
+
+
+
+var day = [{
+  EachDay: ' sunday',
+  breakfast: 'Egg Scrumble',
+  lunch: 'out',
+  dinner: 'Buffalo chicken burger'
+
+    },
+
+    {
+      EachDay: 'monday',
+      breakfast: 'Oatmeal',
+      lunch: 'Steak salad',
+      dinner: 'mex.chicken cassrole'
+
+    },
+      {
+        EachDay: 'tuesday',
+        breakfast: 'Egg Scrumble',
+        lunch: 'Quiona chicken salad',
+        dinner: 'crock Pot Lasagna'
+
+    },
+    {
+    EachDay: 'wensday',
+      breakfast: 'Protein Pancake',
+      lunch: 'medeterian Quinoa',
+      dinner: 'moizz & burgers'
+
+    },
+
+    {
+      EachDay: 'thursday',
+      breakfast: 'Oatmeal',
+      lunch: 'Turkey Sandwitch',
+      dinner: 'Salmon burgers'
+
+    },
+    {
+      EachDay: 'friday',
+      breakfast: 'Egg Scrumble',
+      lunch: 'salad',
+      dinner: 'Apple Pork Loin'
+
+    },
+    {
+      EachDay: 'saturday',
+      breakfast: 'French toast',
+      lunch: '?',
+      dinner: 'Skirt Steak'
+
+    },
+
+];
+var results = tableTemplateInst({data: day});
+document.querySelector('.tableDisplay').innerHTML += results;
+var add = document.querySelector('.bttn');
+
+document.getElementById("myBtn")
 
 function myFunction() {
   // Declare variables
