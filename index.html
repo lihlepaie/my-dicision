@@ -2,47 +2,57 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-<link rel="stylesheet" href="everyday.css">
-<script src="handlebars-v4.0.5.js" charset "utf-8"></script>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="everyday.css">
+    <script src="handlebars-v4.0.5.js" charset "utf-8"></script>
 
 </head>
 <body>
-
-  <h1>{Healthy Weekly Meal Plan}</h1>
-
-    <input value="" type="text" id="myInput" placeholder="Search each day.." title="Type in days" onkeyup="myFunction()"><br></br>
-    <button  value="add"  type="text" id="myBtn">Add</button>
-
-    <script class="tableTemplate " type="text/x-handlebars-template"><table id="t01">
+<h1>{Healthy Weekly Meal Plan}</h1>
 
 
-        <tr id="days">
-          <thead>
-            <th>EachDay</th>
-            <th>Breakfast</th>
-            <th>Lunch</th>
-            <th>Dinner</th>
-          </thead>
-          <tbody>
-        </tr>
-        {{#each data}}
-        <tr>
-            <td>{{EachDay}}</td>
-            <td>{{breakfast}}</td>
-            <td>{{lunch}}</td>
-            <td>{{dinner}}</td>
-            {{/each}}
-        </tr>
-  </tbody>
-  </table>
-</script>
-  <div class="tableDisplay">
+
+<input value="" type="text" id="myInput" placeholder="Search each day.." title="Type in days" onkeyup="myFunction()"><br></br>
+
+    <div class="addF">
+
+    <button type="text" id="myBtn">Add</button>
+    <input value="" type="text" id="e" placeholder="add DF  eachDayday">
+    <input value="" type="text" id="b" placeholder="add DF breakfast">
+    <input value="" type="text" id="l" placeholder="add DF lunch">
+    <input value="" type="text" id="d" placeholder="add DF dinner">
+
+<script class="tableTemplate " type="text/x-handlebars-template">
+        <table id="t01">
 
 
-</div>
-  </div>
+            <tr id="days">
+                <thead>
+                    <th>EachDay</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </thead>
+                <tbody>
+            </tr>
+            {{#each day}}
+            <tr>
+                <td>{{EachDay}}</td>
+                <td>{{breakfast}}</td>
+                <td>{{lunch}}</td>
+                <td>{{dinner}}</td>
+                {{/each}}
+            </tr>
+            </tbody>
+        </table>
+    </script>
+    <div class="tableDisplay">
+
+
+    </div>
+    </div>
     <script rel="stylesheet" src="everyday.js"></script>
 </body>
+
 </html>

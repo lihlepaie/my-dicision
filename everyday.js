@@ -3,6 +3,7 @@
  var tableDisplay = document.querySelector('.tableDisplay');
  var myInput = document.getElementById('myInput').value;
  var table = document.querySelector('#t01');
+ var myBtn = document.getElementById('myBtn');
 
 
 
@@ -61,14 +62,12 @@ var day = [{
       lunch: '?',
       dinner: 'Skirt Steak'
 
-    },
+    }
 
 ];
-var results = tableTemplateInst({data: day});
-document.querySelector('.tableDisplay').innerHTML += results;
-var add = document.querySelector('.bttn');
 
-document.getElementById("myBtn")
+var results = tableTemplateInst({day: day});
+document.querySelector('.tableDisplay').innerHTML = results;
 
 function myFunction() {
   // Declare variables
@@ -90,3 +89,43 @@ function myFunction() {
     }
   }
 }
+
+myBtn.addEventListener('click',function(){
+        var EachDay = e.value
+        var Breakfast =b.value;
+        var Lunch = l.value;
+        var Dinner= d.value;
+
+
+for (var i = 0; i < day.length; i++) {
+if(day[i].EachDay == document.querySelector('#e').value) {
+        return;
+  }
+    }
+
+
+for (var i = 0; i < day.length; i++) {
+  if(day[i].breakfast == document.querySelector('#b').value) {
+        return;
+      }
+}
+for (var i = 0; i < day.length; i++) {
+  if (day [i].lunch == document.querySelector('#l').value) {
+       return;
+  }
+}
+for (var i = 0; i < day.length; i++) {
+  if (day [i].dinner == document.querySelector('#d').value) {
+       return;
+  }
+}
+
+day.push({
+  EachDay:document.querySelector('#e').value,
+  breakfast:document.querySelector('#b').value,
+  lunch:document.querySelector('#l').value,
+  dinner:document.querySelector('#d').value
+  })
+  var results = tableTemplateInst({day: day});
+  document.querySelector('.tableDisplay').innerHTML = results;
+   });
